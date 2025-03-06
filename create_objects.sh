@@ -7,7 +7,7 @@ DIFF_FILE=$DIFF_FOLDER"/"$NOW"_create.sql"
 source $DIR/include/choose-target.sh
 for object in "$@"
 do
-    mysql -h $HOST -P $PORT -u $TARGET_USER -p$TARGET_PASSWORD -D $TARGET_DB -E -e "SHOW CREATE TABLE $object" >> $DIFF_FILE
+    mariadb -h $HOST -P $PORT -u $TARGET_USER -p$TARGET_PASSWORD -D $TARGET_DB -E -e "SHOW CREATE TABLE $object" >> $DIFF_FILE
 done
 sed -i 's/\*\*\*/--***/' $DIFF_FILE
 sed -i 's/^\s*Table:/--Table:/' $DIFF_FILE
