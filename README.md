@@ -24,3 +24,7 @@ A set of bash scripts to deal with a MariaDB database
 * `import.sh -d [database-name] -f [path-to-dump-file]`: imports a database from a dump file
 
 * `create_objects.sh [object-1] [object-2] ...`: shows create sql for tables/views 
+
+* `dev-to-prod.sh [object-1] [object-2] ...`: overwrites PROD db with DEV one __BE CAREFUL!!!__
+
+* `prod-to-dev.sh [object-1] [object-2] ...`: overwrites DEV db with PROD one __BE CAREFUL!!!__
