@@ -14,4 +14,4 @@ FILE=$FILE_PATH"_"$NOW".dump"
       echo "exporting table "$TARGET_DB"."$TABLE
 FILE=$FILE_PATH"_"$TABLE"_"$NOW".dump"
   fi
-mysqldump -u $TARGET_USER -p$TARGET_PASSWORD $TARGET_DB $TABLE > $FILE
+mariadb-dump -u $TARGET_USER -p$TARGET_PASSWORD $TARGET_DB $TABLE > $FILE

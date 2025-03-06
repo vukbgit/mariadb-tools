@@ -11,4 +11,4 @@ esac
 #dump dev & prod
 source $DIR/dump-dev-prod.sh
 echo "restoring $FILE_PROD..."
-mysql -u $DEV_USER -p$DEV_PASSWORD $DEV_DB < $FILE_PROD
+mariadb -u $DEV_USER -p$DEV_PASSWORD $DEV_DB < $FILE_PROD

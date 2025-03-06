@@ -1,10 +1,10 @@
-A set of bash scripts to deal with a MySQL database
+A set of bash scripts to deal with a MariaDB database
 
 ## INSTALLATION ##
 
 * clone repository:
 
-`git clone https://github.com/vukbgit/mysql-tools.git`
+`git clone https://github.com/vukbgit/mariadb-tools.git`
 
 * setup config file:
 
@@ -13,13 +13,11 @@ A set of bash scripts to deal with a MySQL database
 * edit config file setting:
 	* db_source: name of the database to start comparison
 	* db_target: name of the database to be compared to db_source
-	* user: MySQL user name into scripts
-	* password: MySQL user password
+	* user: MariaDB user name into scripts
+	* password: MariaDB user password
 	* host and port if needed
 
 ## SCRIPTS ##
-
-* `compare.sh`: makes a comparison using mysqldbcompare, unfortunately not useful for automatic datyabase synchronization
 
 * `export.sh [database-name] [table-name]`: dumps a whole database or just a table if second argument provided
 

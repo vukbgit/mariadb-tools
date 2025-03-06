@@ -18,4 +18,4 @@ case $ok in
   n) echo -e "${e1}let's do nothing, exiting${e2}";exit;;
 esac
 echo "restoring..."
-mysql -u $TARGET_USER -p$TARGET_PASSWORD $TARGET_DB < $FILE
+mariadb -u $TARGET_USER -p$TARGET_PASSWORD $TARGET_DB < $FILE

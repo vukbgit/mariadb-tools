@@ -21,7 +21,7 @@ YEARMONTH=$(date +"%y%m")
 BASE_FILE_PATH="$DIR/$BAK_FOLDER/$TARGET_DB"
 WEEKFILE="${BASE_FILE_PATH}-${WEEKDAY}.dump"
 echo "dumping weekday db "$TARGET_DB" to file "$WEEKFILE
-mysqldump -u $TARGET_USER -p$TARGET_PASSWORD -C $TARGET_DB > $WEEKFILE
+mariadb-dump -u $TARGET_USER -p$TARGET_PASSWORD -C $TARGET_DB > $WEEKFILE
 MONTHFILE="${BASE_FILE_PATH}-${YEARMONTH}.dump"
 echo "copying to month file "$MONTHFILE
 cp $WEEKFILE $MONTHFILE
